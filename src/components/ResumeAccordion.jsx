@@ -162,7 +162,7 @@ const ResumeAccordion = ({ data }) => {
                         "
                       >
                         {/* Layer Background Animasi */}
-                        <span className="absolute inset-0 bg-[#d2ff00] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in"></span>
+                        <span className="absolute inset-0 bg-[#d2ff00] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-[cubic-bezier(0.80,0,0.43,1)]"></span>
                         
                         {/* Content (Icon & Text) - Dibungkus agar di atas background */}
                         <div className="relative z-10 flex items-center gap-2 group-hover:text-black transition-colors duration-300">
@@ -182,7 +182,7 @@ const ResumeAccordion = ({ data }) => {
                         "
                       >
                         {/* Layer Background Animasi */}
-                        <span className="absolute inset-0 bg-[#d2ff00] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in"></span>
+                        <span className="absolute inset-0 bg-[#d2ff00] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.80,0,0.43,1)]"></span>
                         
                         {/* Content (Icon) */}
                         <span className="relative z-10 group-hover:text-black transition-colors duration-300">
@@ -242,7 +242,7 @@ const ResumeAccordion = ({ data }) => {
                                 absolute inset-0 
                                 bg-white 
                                 translate-y-full group-hover:translate-y-0 
-                                transition-transform duration-300 ease-in
+                                transition-transform duration-500 ease-[cubic-bezier(0.80,0,0.43,1)]
                               "
                             ></span>
 

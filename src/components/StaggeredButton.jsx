@@ -62,7 +62,7 @@ export default function StaggeredButton({
             translate-y-[105%] group-hover:translate-y-0
             transition-transform 
             duration-500 
-            ease-custom
+            ease-in-out
             ${hoverBgClass}
           `} 
         />
