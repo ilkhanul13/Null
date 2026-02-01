@@ -1,5 +1,5 @@
 // cloudinaryHelpers.js
-const CLOUD_NAME = 'dfovmrebt';
+const CLOUD_NAME = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME || 'dfovmrebt';
 
 export const getCloudinaryUrl = (imageObj, options = {}) => {
   const { 
