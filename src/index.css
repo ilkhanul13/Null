@@ -1,0 +1,120 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+
+@theme {
+  /* Mendaftarkan Font Family */
+  --font-sans: "DM Sans", sans-serif;
+  --font-anton: "Anton", sans-serif;
+  --font-Helvetica: "Helvetica Neue", sans-serif;
+
+  /* Mendaftarkan Warna Custom */
+  --color-primary: #303596;
+  --color-bg: #000000;
+  --color-text: #ffffff;
+
+  /* Mendaftarkan Easing Custom */
+  --ease-custom: cubic-bezier(0.76, 0, 0.24, 1);
+  
+  /* Container Custom */
+  --breakpoint-xl: 1440px; 
+}
+
+/* 3. BASE STYLES (Style Global) */
+@layer base {
+  
+  html {
+    @apply bg-bg text-text antialiased overflow-x-clip;
+  }
+
+  body {
+    @apply min-h-screen overflow-x-clip;
+    background-color: #000;
+    color: #fff;
+    cursor: default;
+  }
+
+  /* Typography defaults */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-normal -tracking-[0.02em];
+  }
+
+  /* Setup #root agar full height */
+  #root {
+    @apply min-h-screen flex flex-col relative isolate;
+  }
+
+  /* --- LOGIKA HIDE NATIVE SCROLLBAR (FIXED) --- */
+  /* Kita menyembunyikan scrollbar bawaan browser sepenuhnya 
+     agar CustomScrollbar.jsx bisa mengambil alih tanpa konflik layout */
+  
+  html, body {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+  
+  ::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+    width: 0px;
+    background: transparent;
+  }
+  /* ------------------------------------------- */
+}
+
+/* 4. UTILITIES & COMPONENTS */
+
+.container-custom {
+  @apply w-[90%] max-w-xl mx-auto; 
+}
+
+.font-anton {
+  font-family: var(--font-anton);
+  font-weight: 400;
+}
+
+.app {
+  @apply relative w-full min-h-screen overflow-x-clip isolate;
+}
+
+/* --- LENIS SCROLL SETUP --- */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* --- ANIMASI UTILITY --- */
+@keyframes simpleFade {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: simpleFade 0.4s ease-out forwards;
+}
+
+//Loader
+.custom-loader {
+  height: 2px; /* Dibuat lebih tipis agar elegan */
+  width: 100px;
+  --c: no-repeat linear-gradient(#ffffff 0 0);
+  background: var(--c), var(--c), rgba(255, 255, 255, 0.1);
+  background-size: 60% 100%;
+  animation: l16 2s infinite; /* Durasi dipercepat sedikit agar terasa snappy */
+}
+
+@keyframes l16 {
+  0%   {background-position:-150% 0,-150% 0}
+  66%  {background-position: 250% 0,-150% 0}
+  100% {background-position: 250% 0, 250% 0}
+}

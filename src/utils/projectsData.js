@@ -1,0 +1,251 @@
+export const projectsData = [
+
+  {
+    id: 9,
+    slug: "brand",
+    title: "Poster Ads",
+    client: "FeedBird",
+    category: "Brand",
+    year: "2025",
+    description: "This advertising poster design was originally created as part of a graphic design recruitment task from FeedBird, which involved producing two advertising posters for the CheongKwanJang Hong Sam Won product. The company operates in the high-quality herbal supplement industry, combining Korean red ginseng, red date extract, red berries, and other natural ingredients. The product is intended to help boost energy, enhance immune endurance, and support overall health.",
+    tools: [
+      {app: "Canva"},
+    ],
+    size: "small",
+    links: [
+      { label: "Instagram", url: "https://feedbird.com" },
+      { label: "Facebook", url: "https://www.instagram.com/feedbirdcom/" },
+      { label: "Linkedin", url: "https://web.facebook.com/feedbird.co/" },
+      { label: "Website", url: "http://linkedin.com/company/feedbirdco/" }
+    ],
+    images: [
+      { publicId: "version1_rq7slj" },
+      { publicId: "version2_bdukm7" },
+    ],
+  },
+
+  {
+    id: 8,
+    slug: "personal",
+    title: "Poster",
+    client: "Personal",
+    category: "Poster Design",
+    year: "2022 - Now",
+    description: "These posters are shared on social media as a form of visual communication as well as a space for design exploration. Each design represents ideas, style experimentation, and different visual approaches. The creative process reflects the development of design skills over time. These works are then curated as part of a portfolio.",
+    tools: [
+      {app: "Adobe Illustrator"},
+      {app: "Adobe Photoshop"},
+    ],
+    size: "medium",
+    links: [
+      { label: "Github", url: "https://www.linkedin.com/in/ilkhanul-khalik-262920391/" },
+      { label: "Linkedin", url: "https://www.linkedin.com/in/ilkhanul-khalik-262920391/" },
+      { label: "Instagram", url: "https://www.instagram.com/ilkhanul_" },
+    ],
+    images: [
+      { publicId: "shiteeneger_wve4im" },
+      { publicId: "ctlya_nonhgo" },
+      { publicId: "over_s1n3ny" },
+      { publicId: "heavy_ol9z26" },
+      { publicId: "freepalestine_rwev3g" },
+      { publicId: "ctlyalogo_kqeqf6" },
+      { publicId: "joeposter_bu9jyu" },
+    ],
+  },
+
+  {
+    id: 7,
+    slug: "alize",
+    title: "Flyer Formalis",
+    client: "Formalis",
+    category: "Flyer Design",
+    year: "2022 - Now",
+    description: "A collection of flyer designs created from 2022 to the present, showcasing the evolution of visual style, creativity, and design approach across various projects, while adhering to client directions and requirements.",
+    tools: [
+      {app: "Adobe Illustrator"},
+      {app: "Adobe Photoshop"},
+      {app: "Canva"},
+    ],
+    size: "small",
+    links: [
+      { label: "Instagram", url: "https://www.instagram.com/formalis_lipia/" },
+      { label: "Facebook", url: "https://www.facebook.com/formalis.lipia.71" },
+      { label: "Youtube", url: "https://www.youtube.com/@formalislipiaofficial2425" },
+    ],
+    images: [
+      { publicId: "daurah22_rtxbao" },
+      { publicId: "rdf23_qf8efc" },
+      { publicId: "ramadhan23_tfzysm" },
+      { publicId: "flyrbc_jrsz9j" },
+      { publicId: "flyrbc2_ljt5pw" }
+    ],
+  },
+
+  {
+    id: 6,
+    slug: "kmb",
+    title: "Flyer KMB",
+    client: "KMB",
+    category: "Flyer Design",
+    year: "2022 - Now",
+    description: "A collection of flyer designs created from 2022 to the present, showcasing the evolution of visual style, creativity, and design approach across various projects, while adhering to client directions and requirements.",
+    tools: [
+      {app: "Adobe Illustrator"},
+      {app: "Adobe Photoshop"},
+      {app: "Canva"},
+    ],
+    size: "small",
+    links: [
+      { label: "Instagram", url: "https://www.instagram.com/km_bulukumba/" },
+      { label: "Facebook", url: "https://www.facebook.com/kmbulukumba/?_rdc=2&_rdr#" },
+    ],
+    images: [
+      { publicId: "Socmed_ahgkqc" },
+      { publicId: "bukber09_gt4ro0" },
+      { publicId: "bukber16_ggcvyw" },
+      { publicId: "1to1_rpy1ja" },
+      { publicId: "twibbon_odpclm" },
+      { publicId: "Ucapan_sdtt6l" },
+    ],
+  },
+
+  {
+    id: 5,
+    slug: "baru-durian",
+    title: "Baru Durian",
+    client: "Baru Durian",
+    category: "Logo Design",
+    year: "2025",
+    description: "The logo design embraces a nature-inspired concept, featuring a symbol that represents the durian fruit. This visual identity aims to create a friendly, modern, simple, and easily recognizable impression for customers.",
+    tools: [
+      {app: "Adobe Illustrator"},
+    ],
+    size: "small",
+    links: [
+      { label: "Tiktok", url: "https://www.tiktok.com/@barudurian0" },
+    ],
+    images: [
+      { publicId: "Guidline-01_bwaxvl" },
+      { publicId: "Guidline-02_y0qlcg" },
+      { publicId: "Guidline-03_fz1yaz" },
+      { publicId: "Guidline-04_hwd5e7" },
+      { publicId: "Guidline-05_gihgg2" },
+      { publicId: "Guidline-06_eh5heq" },
+    ],
+  },
+
+  {
+    id: 4,
+    slug: "car-wash",
+    title: "Car Wash",
+    client: "Absoora",
+    category: "Logo Design",
+    year: "2025",
+    description: "This logo is designed to represent a car wash service business that is clean, fast, and reliable. The simple yet strong visual form is combined with elements of water and vehicles, reflecting a commitment to service quality and customer satisfaction.",
+    tools: [
+      {app: "Adobe Illustrator"},
+      {app: "Adobe Photoshop"},
+    ],
+    size: "medium",
+    links: [
+      { label: "Instagram", url: "https://www.instagram.com/absoora.coffee/" },
+      { label: "Tiktok", url: "https://www.tiktok.com/@absoora.coffee" },
+    ],
+    images: [
+      { publicId: "Guidline-01_ls7q3c" },
+      { publicId: "Guidline-02_fzztrx" },
+      { publicId: "Guidline-03_egajcr" },
+      { publicId: "Guidline-04_yzfeq0" },
+      { publicId: "Guidline-05_mhy2ww" },
+      { publicId: "Guidline-06_nlavn1" },
+      { publicId: "Guidline-07_euv8sl" },
+      { publicId: "Guidline-08_kldkhi" },
+      { publicId: "1_vy0ray" },
+      { publicId: "2_juivfw" },
+      { publicId: "3_waycxk" },
+      { publicId: "4_zfjety" },
+    ],
+  },
+
+  {
+    id: 3,
+    slug: "t-shirt",
+    title: "Start With For",
+    client: "Formalis",
+    category: "T-Shirt Design",
+    year: "2024",
+    description: "This organizational t-shirt design adopts a black-and-white monochrome concept with a modern visual approach. Arabic typography and Islamic-inspired symbols are treated in a minimalist style to create an elegant, bold, and contemporary identity that reflects the organization's values.",
+    tools: [
+      {app: "Adobe Illustrator"},
+      {app: "Adobe Photoshop"},
+      {app: "Figma"},
+    ],
+    size: "small",
+    links: [
+      { label: "Instagram", url: "https://www.instagram.com/formalis_lipia/" },
+      { label: "Facebook", url: "https://www.facebook.com/formalis.lipia.71" },
+      { label: "Youtube", url: "https://www.youtube.com/@formalislipiaofficial2425" },
+    ],
+    images: [
+      { publicId: "wback_qmvwtv" },
+      { publicId: "bback_ahqfqf" },
+      { publicId: "wfront_ssgcgg" },
+      { publicId: "bfront_fzpddm" },
+      { publicId: "wts_zrgl8n" },
+      { publicId: "bts_ajju5h" }
+    ],
+  },
+
+  {
+    id: 2,
+    slug: "kami",
+    title: "KAMI",
+    client: "KAMI",
+    category: "Logo Design",
+    year: "2024",
+    description: "A complete brand identity design project including a logo, color palette, typography, and brand guidelines. Focused on a modern aesthetic that reflects the values of a local community brand.",
+    tools: [
+      {app: "Adobe Illustrator"},
+    ],
+    size: "small",
+    links: [
+      { label: "Instagram", url: "https://www.instagram.com/reels/DR0mUXpgYbK/" },
+    ],
+    images: [
+      { publicId: "LogoGuidline01_wffnc2" },
+      { publicId: "LogoGuidline02_ykq5i7" },
+      { publicId: "LogoGuidline03_pnfddl" },
+      { publicId: "LogoGuidline04_bjdksg" },
+      { publicId: "LogoGuidline05_m1bbxf" },
+      { publicId: "LogoGuidline06_ksu9hr" },
+    ],
+  },
+
+  {
+    id: 1,
+    slug: "musyar",
+    title: "Musyar XXII",
+    client: "Formalis",
+    category: "Logo Design",
+    year: "2022",
+    description: "The theme of regeneration is expressed through shapes, lines, and symbols that represent growth, continuity, and the transition of roles from one generation to the next. The logo serves not only as a visual identity for the event, but also as a symbol of renewal, unity, and the sustainability of the organization's values.",
+    tools: [
+      {app: "Adobe Illustrator"},
+    ],
+    size: "small",
+    links: [
+      { label: "Instagram", url: "https://www.instagram.com/formalis_lipia/" },
+      { label: "Facebook", url: "https://www.facebook.com/formalis.lipia.71" },
+      { label: "Youtube", url: "https://www.youtube.com/@formalislipiaofficial2425" },
+    ],
+    images: [
+      { publicId: "Guidlines-01_szuk1r" },
+      { publicId: "Guidlines-02_sajphn" },
+      { publicId: "Guidlines-03_rdlx1s" },
+      { publicId: "Guidlines-04_rxasvk" },
+      { publicId: "Guidlines-05_ysdjna" },
+      { publicId: "Guidlines-06_powbhg" },
+      { publicId: "Guidlines-07_gu0gpc" },
+    ],
+  },
+];
