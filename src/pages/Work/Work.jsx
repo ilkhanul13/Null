@@ -93,46 +93,40 @@ export default function Work() {
           {/* --- BAGIAN FILTER BUTTONS (BARU) --- */}
           <RevealWrapper>
             <div className="flex flex-wrap gap-3 mb-12 items-center justify-center md:justify-start">
-{categories.map((cat, index) => {
-  // Cek apakah kategori ini sedang aktif
-  const isActive = activeCategory === cat;
+              {categories.map((cat, index) => {
+                // Cek apakah kategori ini sedang aktif
+                const isActive = activeCategory === cat;
 
-  return (
-    <button
-      key={index}
-      onClick={() => setActiveCategory(cat)}
-      className={`
-        relative group overflow-hidden px-5 py-2 text-sm md:text-base 
-        border transition-all duration-300 ease-in-out cursor-pointer
-        ${isActive ? 'border-white/20' : 'border-white/20 hover:border-white/20'}
-      `}
-    >
-      {/* 1. LAYER BACKGROUND ANIMASI 
-          - Jika Active: Langsung muncul (translate-y-0)
-          - Jika Tidak Active: Sembunyi di bawah (translate-y-full), naik saat hover
-      */}
-      <span 
-        className={`
-          absolute inset-0 bg-[#d2ff00] transition-transform duration-500 ease-[cubic-bezier(0.80,0,0.43,1)]
-          ${isActive ? 'translate-y-0' : 'translate-y-full group-hover:translate-y-0'}
-        `}
-      ></span>
+                return (
+                  <button
+                    key={index}
+                    onClick={() => setActiveCategory(cat)}
+                    className={`
+                      relative group overflow-hidden px-5 py-2 text-sm md:text-base 
+                      border transition-all duration-300 ease-in-out cursor-pointer
+                      ${isActive ? 'border-white/20' : 'border-white/20 hover:border-white/20'}
+                    `}
+                  >
+                    {/* 1. LAYER BACKGROUND ANIMASI */}
+                    <span 
+                      className={`
+                        absolute inset-0 bg-[#d2ff00] transition-transform duration-500 ease-[cubic-bezier(0.80,0,0.43,1)]
+                        ${isActive ? 'translate-y-0' : 'translate-y-full group-hover:translate-y-0'}
+                      `}
+                    ></span>
 
-      {/* 2. LAYER TEXT (CONTENT)
-          - Harus z-10 agar berada di atas background kuning
-          - Warnanya berubah jadi hitam jika Active ATAU jika di-hover
-      */}
-      <span 
-        className={`
-          relative z-10 font-medium transition-colors duration-300
-          ${isActive ? 'text-black' : 'text-white/60 group-hover:text-black'}
-        `}
-      >
-        {cat}
-      </span>
-    </button>
-  );
-})}
+                    {/* 2. LAYER TEXT (CONTENT) */}
+                    <span 
+                      className={`
+                        relative z-10 font-medium transition-colors duration-300
+                        ${isActive ? 'text-black' : 'text-white/60 group-hover:text-black'}
+                      `}
+                    >
+                      {cat}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
           </RevealWrapper>
 
