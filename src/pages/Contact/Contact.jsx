@@ -230,7 +230,7 @@ export default function Contact() {
                       > 
 
                         <StaggeredButton 
-                          href="https://www.linkedin.com/in/ilkhanul-khalik-262920391/" 
+                          href="https://www.linkedin.com/in/ilkhanul/" 
                           enableHoverBg={true}
                           target="_blank"
                           rel="noopener noreferrer"

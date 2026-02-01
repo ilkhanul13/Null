@@ -81,7 +81,7 @@ export default function Footer() {
                     </StaggeredButton>
                     <StaggeredButton
                         enableHoverBg={false} 
-                        href="https://www.linkedin.com/in/ilkhanul-khalik-262920391/" 
+                        href="https://www.linkedin.com/in/ilkhanul/" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="text-gray-300 transition-colors duration-300 hover:text-[#d2ff00]"

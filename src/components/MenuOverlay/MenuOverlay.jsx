@@ -127,7 +127,7 @@ export default function MenuOverlay({ navItems, onNavigate, isNavigating }) {
                                 <MdOutlineAlternateEmail className="text-[1.4rem] md:text-[1.8rem] text-white group-hover:text-[#d2ff00] transition-colors" />
                             </a>
                             <a 
-                              href="https://www.linkedin.com/in/ilkhanul-khalik-262920391/"
+                              href="https://www.linkedin.com/in/ilkhanul/"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="flex items-center group">
