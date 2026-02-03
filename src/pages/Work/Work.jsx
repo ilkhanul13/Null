@@ -70,9 +70,11 @@ export default function Work() {
     return uniqueCategories;
   }, []);
 
-  const filteredProjects = projectsData.filter((project) => {
-    return activeCategory === "All" ? true : project.category === activeCategory;
-  });
+const filteredProjects = useMemo(() => {
+  return activeCategory === "All" 
+    ? projectsData 
+    : projectsData.filter((project) => project.category.trim() === activeCategory.trim());
+}, [activeCategory]); // Gunakan useMemo agar tidak re-render berat
 
   const getSizeClass = (size) => {
     if (size === 'large') {
@@ -151,6 +153,11 @@ export default function Work() {
             >
               {filteredProjects.map((project) => (
                 <motion.div 
+                  layout
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }} // Animasi saat kartu hilang
+                  transition={{ duration: 0.4 }}
                   key={project.id} 
                   variants={cardVariants}
                   className={`w-full relative aspect-square overflow-hidden reveal-child ${getSizeClass(project.size)}`}
