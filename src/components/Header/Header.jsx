@@ -71,8 +71,16 @@ export default function Header() {
         <div className="w-full max-w-360 mx-auto flex justify-between items-center pb-5 md:pb-9 relative">
           
           {/* LOGO */}
-          <div className="flex items-center z-10">
+          {/* <div className="flex items-center z-10">
             <div onClick={() => handleNavigation('/')} className="cursor-pointer flex text-[#d2ff00] text-[16px] md:text-[18px] font-bold tracking-widest">
+              NULL
+            </div>
+          </div> */}
+          <div className="flex items-center z-10">
+            <div
+              onClick={() => handleNavigation('/')}
+              className="cursor-pointer bg-[#d2ff00] px-4 py-2 text-black font-extrabold not-visited:tracking-widest"
+            >
               NULL
             </div>
           </div>
