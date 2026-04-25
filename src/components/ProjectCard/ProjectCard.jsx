@@ -99,6 +99,8 @@ export default function ProjectCard({ project }) {
                   src={currentImageUrl} 
                   className="w-full h-full object-cover block"
                   alt={project.client}
+                  loading="eager"
+                  style={{ backfaceVisibility: 'hidden' }}
                 />
               ) : (
                 /* Menggunakan StripeTransition menggantikan AnimatePresence */
@@ -106,9 +108,8 @@ export default function ProjectCard({ project }) {
                   key={currentIndex} 
                   firstImageSrc={prevImageUrl}
                   secondImageSrc={currentImageUrl}
-                  columns={4} // Sedikit lebih banyak kolom membuat efek random terlihat lebih "sibuk" dan keren
+                  numPoints={5}
                   animationStepDuration={1.3} 
-
                   className="w-[102%] h-[102%]"
                 />
               )

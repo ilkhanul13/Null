@@ -258,7 +258,7 @@ function ProjectContent({ project }) {
                       key={`liquid-${activeImage.publicId}`} 
                       firstImageSrc={getUrl(prevImage) || getUrl(activeImage)}
                       secondImageSrc={getUrl(activeImage)}
-                      numPoints={12}
+                      numPoints={5}
                       duration={1.3}
                       className="w-full h-full"
                       imgClassName="bg-cover bg-center"

@@ -41,7 +41,7 @@ const blockVariants = {
 export default function PageTransition({ children, routeName }) {
   return (
     <div className="relative w-full">
-      <div className="fixed inset-0 flex pointer-events-none z-[9999] w-screen h-screen overflow-hidden">
+      <div className="fixed inset-0 flex pointer-events-none z-9999 w-screen h-screen overflow-hidden">
         {[...Array(4)].map((_, i) => (
           <motion.div
             key={i}
@@ -55,7 +55,7 @@ export default function PageTransition({ children, routeName }) {
         ))}
       </div>
 
-      <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-[9999]">
+      <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-9999">
         <div className="overflow-hidden py-2">
           <motion.h1
             key={routeName}

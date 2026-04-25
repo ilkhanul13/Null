@@ -4,8 +4,8 @@ import { gsap } from 'gsap';
 function LiquidImageTransition({
   firstImageSrc,
   secondImageSrc,
-  numPoints = 10,
-  duration = 1,
+  numPoints = 5,
+  duration = 1.3,
   className = '',
   imgClassName = ""
 }) {
