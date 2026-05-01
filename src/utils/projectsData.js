@@ -158,7 +158,7 @@ export const projectsData = [
     images: [
       { publicId: "Guideline-01_a6yogk" },
       { publicId: "Guideline-02_sxfjpq" },
-      { publicId: "Guideline-02_sxfjpq" },
+      { publicId: "Guideline-03_qnvkog" },
       { publicId: "Guideline-04_gjlevt" },
       { publicId: "Guideline-05_rfgjxl" },
       { publicId: "Guideline-06_vq2pal" },
