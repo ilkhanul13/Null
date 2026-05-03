@@ -226,7 +226,7 @@ export const projectsData = [
       { publicId: "Guidline-08_kl9m0h" },
       { publicId: "Guidline-09_hvqd35" },
       { publicId: "Guidline-10_k8qpxr" },
-      { publicId: "Guidline-11_lew9fr" },
+      { publicId: "Guidline-11_cxlu0l" },
       { publicId: "Guidline-12_d6uylm" },
     ],
   },
