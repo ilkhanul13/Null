@@ -13,14 +13,13 @@ function LiquidImageTransition({
   const pathRef = useRef(null);
   const [isReady, setIsReady] = useState(false);
 
-  // SOLUSI: Lazy Initializer. Fungsi ini hanya lari 1x saat mount.
-  // Ini dianggap 'pure' oleh React untuk inisialisasi state.
+  // Random direction (run sekali saat mount)
   const [direction] = useState(() => {
     const modes = ['TOP_TO_BOTTOM', 'BOTTOM_TO_TOP', 'LEFT_TO_RIGHT', 'RIGHT_TO_LEFT'];
     return modes[Math.floor(Math.random() * modes.length)];
   });
 
-  // Preload gambar tetap di useEffect (Side Effect)
+  // Preload image kedua
   useEffect(() => {
     let isMounted = true;
     const img = new Image();
@@ -34,12 +33,20 @@ function LiquidImageTransition({
   useLayoutEffect(() => {
     if (!isReady || !pathRef.current) return;
 
+    const EDGE = 1; // overshoot biar nutup rapat
     const points = [];
     for (let j = 0; j < numPoints; j++) points.push(100);
 
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         onUpdate: () => render(points),
+        onComplete: () => {
+          // paksa full close biar gak ada celah
+          for (let i = 0; i < points.length; i++) {
+            points[i] = 0;
+          }
+          render(points);
+        },
         defaults: { ease: "power2.inOut" }
       });
 
@@ -56,44 +63,41 @@ function LiquidImageTransition({
       if (!pathRef.current) return;
       let d = "";
 
-      // Logika render berdasarkan sumbu (X untuk Horisontal, Y untuk Vertikal)
-      
-      
       if (direction === 'BOTTOM_TO_TOP') {
-        d = `M 0 100 V ${p[0]} C`;
+        d = `M -${EDGE} 101 V ${p[0]} C`;
         for (let j = 0; j < numPoints - 1; j++) {
           const x = ((j + 1) / (numPoints - 1)) * 100;
           const cp = x - (100 / (numPoints - 1)) / 2;
           d += ` ${cp} ${p[j]} ${cp} ${p[j+1]} ${x} ${p[j+1]}`;
         }
-        d += ` V 100 H 0 Z`;
+        d += ` V 101 H -${EDGE} Z`;
       } 
       else if (direction === 'TOP_TO_BOTTOM') {
-        d = `M 0 0 V ${100 - p[0]} C`;
+        d = `M -${EDGE} -${EDGE} V ${100 - p[0]} C`;
         for (let j = 0; j < numPoints - 1; j++) {
           const x = ((j + 1) / (numPoints - 1)) * 100;
           const cp = x - (100 / (numPoints - 1)) / 2;
           d += ` ${cp} ${100 - p[j]} ${cp} ${100 - p[j+1]} ${x} ${100 - p[j+1]}`;
         }
-        d += ` V 0 H 0 Z`;
+        d += ` V -${EDGE} H -${EDGE} Z`;
       }
       else if (direction === 'LEFT_TO_RIGHT') {
-        d = `M 0 0 H ${100 - p[0]} C`;
+        d = `M -${EDGE} -${EDGE} H ${100 - p[0]} C`;
         for (let j = 0; j < numPoints - 1; j++) {
           const y = ((j + 1) / (numPoints - 1)) * 100;
           const cp = y - (100 / (numPoints - 1)) / 2;
           d += ` ${100 - p[j]} ${cp} ${100 - p[j+1]} ${cp} ${100 - p[j+1]} ${y}`;
         }
-        d += ` H 0 V 0 Z`;
+        d += ` H -${EDGE} V -${EDGE} Z`;
       }
       else if (direction === 'RIGHT_TO_LEFT') {
-        d = `M 100 0 H ${p[0]} C`;
+        d = `M 101 -${EDGE} H ${p[0]} C`;
         for (let j = 0; j < numPoints - 1; j++) {
           const y = ((j + 1) / (numPoints - 1)) * 100;
           const cp = y - (100 / (numPoints - 1)) / 2;
           d += ` ${p[j]} ${cp} ${p[j+1]} ${cp} ${p[j+1]} ${y}`;
         }
-        d += ` H 100 V 0 Z`;
+        d += ` H 101 V -${EDGE} Z`;
       }
 
       pathRef.current.setAttribute("d", d);
@@ -106,7 +110,8 @@ function LiquidImageTransition({
 
   return (
     <div ref={containerRef} className={`relative w-full h-full overflow-hidden ${className}`}>
-      {/* Background (Gambar lama) */}
+      
+      {/* Background */}
       {firstImageSrc && (
         <div 
           className={`absolute inset-0 bg-cover bg-center ${imgClassName}`}
@@ -114,13 +119,14 @@ function LiquidImageTransition({
         />
       )}
 
-      {/* Foreground (Gambar baru dengan Liquid Mask) */}
+      {/* Foreground (dengan fix anti-aliasing) */}
       <div 
         className={`absolute inset-0 bg-cover bg-center ${imgClassName}`}
         style={{ 
           backgroundImage: `url(${secondImageSrc})`,
           clipPath: `url(#${clipId})`,
-          WebkitClipPath: `url(#${clipId})`
+          WebkitClipPath: `url(#${clipId})`,
+          transform: 'scale(1.001)' // tambahan kecil biar gak ada gap
         }}
       />
 
