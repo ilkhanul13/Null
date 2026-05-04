@@ -128,7 +128,7 @@ export const projectsData = [
       { publicId: "Guidline-01_wlbovi" },
       { publicId: "Guidline-02_hyundv" },
       { publicId: "Guidline-03_krym0a" },
-      { publicId: "Guidline-03_krym0a" },
+      { publicId: "Guidline-04_sj0k6z" },
       { publicId: "Guidline-05_sfbpaj" },
       { publicId: "Guidline-06_t4verx" },
       { publicId: "Guidline-07_vl5oik" },
